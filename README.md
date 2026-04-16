@@ -1,37 +1,35 @@
-# 📊 Sales Insights: Data Analysis & Visualization Project
+# 📊 Sales Insights - Data Analysis & Visualization Project
 
 ## 🔍 Project Overview
 
-This project focuses on analyzing sales data for AtliQ Hardware, a company providing computer hardware and peripherals. The goal was to transform raw data into actionable insights to help the sales director monitor revenue trends, identify declining markets, and make data-driven decisions. 
+This project aims to provide data-driven insights to the Sales Director of "AtliQ Hardware," a company supplying computer hardware and peripherals to various clients. The company was facing challenges in tracking sales and understanding the declining revenue in a competitive market.
 
-The dashboard provides a comprehensive view of sales performance across different cities, customers, and products from 2017 to 2020.
+I built a comprehensive Sales Insights Dashboard to help the management make informed decisions by visualizing key performance indicators (KPIs) and sales trends.
 
 ---
+
 ## 📸 Dashboard Preview
 
-![Project Thumbnail](dashboard.png)
-
+![Dashboard](dashboard.png)
 
 ---
 
 ## 🎯 Problem Statement
 
-The sales director was facing challenges in tracking business performance across different regions in India. The reports provided by regional managers were often complex and didn't clearly show the:
-
-* Revenue trends over time
-* Top-performing markets and customers
-* Product performance
-* Sales quantity distribution
-
-There was no centralized dashboard for quick decision-making.
+## 🎯 Objectives
+- Analyze sales data to identify key trends
+- Track revenue performance across markets
+- Understand customer purchasing behavior
+- Help business take data-driven decisions
 
 ---
 
 ## 🛠️ Tools & Technologies Used
 
-* SQL (MySQL): For data extraction, cleaning, and initial exploratory data analysis (EDA).
-* Power BI Desktop: For data modeling, ETL (Power Query), and creating the interactive dashboard.
-* DAX (Data Analysis Expressions): To create calculated measures like Total Revenue and Sales Quantity.
+* **MySQL**: For data storage and initial data exploration.
+* **Power BI Desktop**: For ETL (Extract, Transform, Load) processes, data modeling, and creating interactive dashboards.
+* **Power Query (DAX)**: To perform data cleaning and create calculated measures like Normalized Revenue and Total Profit.
+* **SQL Queries**: To validate data and perform ad-hoc analysis.
 
 ---
 
@@ -47,18 +45,16 @@ The dataset consists of multiple tables:
 
 ---
 
-## ⚙️ Data Preparation Steps
+## 🔍 Key Analysis Performed
 
-1. **Data Discovery**: Performed initial data analysis in MySQL to understand the database schema and table relationships.
-
-2. **Data Cleaning**: Imported data into Power BI and used Power Query to:
-   * Remove null values and "garbage" data.
-   * Normalize currency (Converted USD transactions to INR for uniform reporting).
-   * Filter out irrelevant records (e.g., zero sales amount).
-
-3. **Data Modeling**: Established a Star Schema by connecting the transactions fact table with dimension tables like customers, products, markets, and date.
-
-4. **Dashboard Creation**: Developed an interactive visual interface to track KPIs.
+* **Data Discovery**: Explored the `sales` database which includes tables like `customers`, `date, markets`, `products`, and `transactions`.
+* **SQL Validation**: Ran various SQL queries to understand market-specific sales, distinct products, and revenue by year/month.
+* **Data Cleaning (ETL)**:
+  * Removed transactions with sales amounts less than or equal to 0.
+  * Handled currency issues (converting USD to INR) to create a uniform `Normalized Amount` column.
+  * Cleaned empty values and garbage characters in market names.
+* **Data Modeling**: Created a Star Schema in Power BI by linking the transaction fact table with dimension tables (Date, Customer, Product, Market).
+* **Dashboard Creation**: Designed 3 different views to track Revenue, Profit Margin, and Sales Quantity.
 
 ---
 
@@ -87,20 +83,20 @@ The dataset consists of multiple tables:
 
 ## 💼 Business Impact
 
-* Revenue Optimization: The company can now see which specific markets (like Delhi, Mumbai, etc.) are contributing the most and which ones need more marketing focus.
-* Real-time Tracking: Replaces manual, static Excel reports with a dynamic dashboard that updates automatically with new data.
-* Cost Reduction: By identifying low-performing products and regions, the company can save costs on ineffective sales strategies.
-* Data-Driven Decisions: Provides a single source of truth for the Sales Director to make strategic moves based on facts rather than gut feeling.
+* **Real-time Tracking**: The management no longer needs to rely on manual Excel reports from regional managers
+* **Identify Weak Markets**: The dashboard highlights regions with declining profit margins, allowing the company to focus on specific improvement areas.
+* **Customer Insights**: Identifies top customers and their contribution to total revenue, helping in targeted marketing strategies.
+* **Profitability Analysis**: Enabled the company to see not just revenue, but the actual profit made after costs/discounts.
 
 ---
 
 ## 🚀 What I Learned
 
-* Writing complex SQL queries for data analysis
-* Data cleaning and transformation using Power Query
-* Building interactive dashboards in Power BI
-* Data modeling and relationships
-* Business problem solving using data
+* How to connect Power BI with a MySQL database.
+* Writing complex DAX formulas to create dynamic measures.
+* Data cleaning techniques in Power Query to ensure data accuracy.
+* How to translate business problems into visual data stories.
+* Understanding the importance of "Normalized Revenue" in multi-currency transactions.
 
 ---
 
