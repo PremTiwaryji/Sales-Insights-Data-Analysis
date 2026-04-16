@@ -10,7 +10,7 @@ I built a comprehensive Sales Insights Dashboard to help the management make inf
 
 ## 📸 Dashboard Preview
 
-![Dashboard](dashboard.png)
+![Dashboard](Dashboard.png)
 
 ---
 
